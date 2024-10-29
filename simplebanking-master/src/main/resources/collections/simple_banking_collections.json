@@ -1,0 +1,108 @@
+{
+  "info": {
+    "name": "Banking Service API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Credit Account",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/account/v1/credit/{{accountNumber}}",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "account",
+            "v1",
+            "credit",
+            "{{accountNumber}}"
+          ],
+          "variable": [
+            {
+              "key": "accountNumber",
+              "value": "669-7788"
+            }
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\"amount\": 1000.0}"
+        }
+      }
+    },
+    {
+      "name": "Debit Account",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/account/v1/debit/{{accountNumber}}",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "account",
+            "v1",
+            "debit",
+            "{{accountNumber}}"
+          ],
+          "variable": [
+            {
+              "key": "accountNumber",
+              "value": "669-7788"
+            }
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\"amount\": 50.0}"
+        }
+      }
+    },
+    {
+      "name": "Get Account Details",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/account/v1/{{accountNumber}}",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "account",
+            "v1",
+            "{{accountNumber}}"
+          ],
+          "variable": [
+            {
+              "key": "accountNumber",
+              "value": "669-7788"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
